@@ -1,2 +1,2 @@
 # ZeeshanAhmadHW.github.io
-this is a read me file
+This is the F28WP lab repository by Zeeshan Ahmad
