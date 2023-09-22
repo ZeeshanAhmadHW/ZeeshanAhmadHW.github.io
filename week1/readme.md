@@ -1,1 +1,1 @@
-This is week 1 lab
+This is week 1 lab.
