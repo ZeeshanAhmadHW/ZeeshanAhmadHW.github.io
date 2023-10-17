@@ -6,8 +6,8 @@ images = ["images/1.jpeg","images/2.jpeg","images/3.jpeg","images/4.jpeg",
 
 function slide(){
     imageloop = setInterval(function(){
-        if (current === 0 || current === 8){
-            current = 1;
+        if (current === 7){
+            current = 0;
         }else{
             current = current + 1;
         }
