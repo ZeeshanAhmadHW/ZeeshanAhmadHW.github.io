@@ -15,7 +15,7 @@ function emailcheck(){
     if (email.length === 0){
         document.getElementById("email").classList.add("error");
         document.getElementById("emailError").textcontent = "email field cannot be empty";
-    }else if (email.includes("@") && email.includes(".com")){
+    }else if (!(email.includes("@") && email.includes(".com"))){
         document.getElementById("email").classList.add("error");
         document.getElementById("emailError").textcontent = "email must be in format";
     }else {
@@ -27,7 +27,7 @@ function emailcheck(){
 
 function passcheck(){
     pass = document.getElementById("pass").value;
-    if (uname.length < 8){
+    if (pass.length < 8){
         document.getElementById("pass").classList.add("error");
         document.getElementById("passError").textcontent = "password must have atleast 8 characters";
     }else {
@@ -40,7 +40,7 @@ function passcheck(){
 function conpasscheck(){
     pass = document.getElementById("pass").value;
     conpass = document.getElementById("conpass").value;
-    if (pass != conpass){
+    if (pass !== conpass){
         document.getElementById("conpass").classList.add("error");
         document.getElementById("conpassError").textcontent = "passwords do not match";
     }else {
