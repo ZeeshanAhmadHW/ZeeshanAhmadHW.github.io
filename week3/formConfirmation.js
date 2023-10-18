@@ -2,11 +2,11 @@ function unamecheck(){
     uname = document.getElementById("uname").value;
     if (uname.length === 0){
         document.getElementById("uname").classList.add("error");
-        document.getElementById("unameerror").innerHTML = "username field cannot be empty";
+        document.getElementById("unameerror").textcontent = "username field cannot be empty";
     }else {
         document.getElementById("uname").classList.remove("error");
         document.getElementById("uname").classList.add("success");
-        document.getElementById("unameerror").innerHTML = "";
+        document.getElementById("unameerror").textcontent = "";
     }
 }
 
@@ -14,14 +14,14 @@ function emailcheck(){
     email = document.getElementById("email").value;
     if (email.length === 0){
         document.getElementById("email").classList.add("error");
-        document.getElementById("emailerror").innerHTML = "email field cannot be empty";
+        document.getElementById("emailerror").textcontent = "email field cannot be empty";
     }else if (email.includes("@") && email.includes(".com")){
         document.getElementById("email").classList.add("error");
-        document.getElementById("emailerror").innerHTML = "email must be in format";
+        document.getElementById("emailerror").textcontent = "email must be in format";
     }else {
         document.getElementById("email").classList.remove("error");
         document.getElementById("email").classList.add("success");
-        document.getElementById("emailerror").innerHTML = "";
+        document.getElementById("emailerror").textcontent = "";
     }
 }
 
@@ -29,11 +29,11 @@ function passcheck(){
     pass = document.getElementById("pass").value;
     if (uname.length < 8){
         document.getElementById("pass").classList.add("error");
-        document.getElementById("passerror").innerHTML = "password must have atleast 8 characters";
+        document.getElementById("passerror").textcontent = "password must have atleast 8 characters";
     }else {
         document.getElementById("pass").classList.remove("error");
         document.getElementById("pass").classList.add("success");
-        document.getElementById("passerror").innerHTML = "";
+        document.getElementById("passerror").textcontent = "";
     }
 }
 
@@ -42,11 +42,11 @@ function conpasscheck(){
     conpass = document.getElementById("conpass").value;
     if (pass != conpass){
         document.getElementById("conpass").classList.add("error");
-        document.getElementById("conpasserror").innerHTML = "passwords do not match";
+        document.getElementById("conpasserror").textcontent = "passwords do not match";
     }else {
         document.getElementById("conpass").classList.remove("error");
         document.getElementById("conpass").classList.add("success");
-        document.getElementById("conpasserror").innerHTML = "";
+        document.getElementById("conpasserror").textcontent = "";
     }
 
 }
