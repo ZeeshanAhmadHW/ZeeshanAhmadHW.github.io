@@ -1,56 +1,52 @@
 function unamecheck(){
-    uname = document.getElementById("uname");
-    unameError = document.getElementById("unameError");
-    if (uname.value.length === 0){
-        uname.classList.add("error");
-        unameError.textcontent = "username field cannot be empty";
+    uname = document.getElementById("uname").value;
+    if (uname.length === 0){
+        document.getElementById("uname").classList.add("error");
+        document.getElementById("unameError").textcontent = "username field cannot be empty";
     }else {
-        uname.classList.remove("error");
-        uname.classList.add("success");
-        unameError.textcontent = "";
+        document.getElementById("uname").classList.remove("error");
+        document.getElementById("uname").classList.add("success");
+        document.getElementById("unameError").textcontent = "";
     }
 }
 
 function emailcheck(){
-    email = document.getElementById("email");
-    emailError = document.getElementById("emailError");
-    if (email.value.length === 0){
-        email.classList.add("error");
-        emailError.textcontent = "email field cannot be empty";
+    email = document.getElementById("email").value;
+    if (email.length === 0){
+        document.getElementById("email").classList.add("error");
+        document.getElementById("emailError").textcontent = "email field cannot be empty";
     }else if (!(email.includes("@") && email.includes(".com"))){
-        email.classList.add("error");
-        emailError.textcontent = "email must be in format";
+        document.getElementById("email").classList.add("error");
+        document.getElementById("emailError").textcontent = "email must be in format";
     }else {
-        email.classList.remove("error");
-        email.classList.add("success");
-        emailError.textcontent = "";
+        document.getElementById("email").classList.remove("error");
+        document.getElementById("email").classList.add("success");
+        document.getElementById("emailError").textcontent = "";
     }
 }
 
 function passcheck(){
-    pass = document.getElementById("pass");
-    passError = document.getElementById("passError");
+    pass = document.getElementById("pass").value;
     if (pass.length < 8){
-        pass.classList.add("error");
-        passError.textcontent = "password must have atleast 8 characters";
+        document.getElementById("pass").classList.add("error");
+        document.getElementById("passError").textcontent = "password must have atleast 8 characters";
     }else {
-        pass.classList.remove("error");
-        pass.classList.add("success");
-        passError.textcontent = "";
+        document.getElementById("pass").classList.remove("error");
+        document.getElementById("pass").classList.add("success");
+        document.getElementById("passError").textcontent = "";
     }
 }
 
 function conpasscheck(){
-    pass = document.getElementById("pass");
-    conpass = document.getElementById("conpass");
-    conpassError = document.getElementById("conpassError");
+    pass = document.getElementById("pass").value;
+    conpass = document.getElementById("conpass").value;
     if (pass !== conpass){
-        conpass.classList.add("error");
-        conpassError.textcontent = "passwords do not match";
+        document.getElementById("conpass").classList.add("error");
+        document.getElementById("conpassError").textcontent = "passwords do not match";
     }else {
-        conpass.classList.remove("error");
-        conpass.classList.add("success");
-        conpassError.textcontent = "";
+        document.getElementById("conpass").classList.remove("error");
+        document.getElementById("conpass").classList.add("success");
+        document.getElementById("conpassError").textcontent = "";
     }
 
 }
