@@ -3,6 +3,7 @@ function unamecheck(){
     var unameError = document.getElementById("unameError");
     var borderColor = document.getElementById("unameField");
     if (uname.value.length === 0){
+        borderColor.classList.remove("success");
         borderColor.classList.add("error");
         unameError.textContent = "username field cannot be empty";
     }else {
@@ -17,9 +18,11 @@ function emailcheck(){
     var emailError = document.getElementById("emailError");
     var borderColor = document.getElementById("emailField");
     if (email.value.length === 0){
+        borderColor.classList.remove("success");
         borderColor.classList.add("error");
         emailError.textContent = "email field cannot be empty";
     }else if (!(email.value.includes("@") && email.value.includes(".com"))){
+        borderColor.classList.remove("success");
         borderColor.classList.add("error");
         emailError.textContent = "email must be in format";
     }else {
@@ -34,6 +37,7 @@ function passcheck(){
     var passError = document.getElementById("passError");
     var borderColor = document.getElementById("passField");
     if (pass.value.length < 8){
+        borderColor.classList.remove("success");
         borderColor.classList.add("error");
         passError.textContent = "password must have atleast 8 characters";
     }else {
@@ -49,6 +53,7 @@ function conpasscheck(){
     var conpassError = document.getElementById("conpassError");
     var borderColor = document.getElementById("conpassField");
     if (pass.value != conpass.value){
+        borderColor.classList.remove("success");
         borderColor.classList.add("error");
         conpassError.textContent = "passwords do not match";
     }else {
