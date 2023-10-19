@@ -17,7 +17,7 @@ function emailcheck(){
     if (email.value.length === 0){
         email.classList.add("error");
         emailError.textContent = "email field cannot be empty";
-    }else if (!(email.includes("@") && email.includes(".com"))){
+    }else if (!(email.value.includes("@") && email.value.includes(".com"))){
         email.classList.add("error");
         emailError.textContent = "email must be in format";
     }else {
@@ -44,7 +44,7 @@ function conpasscheck(){
     var pass = document.getElementById("pass");
     var conpass = document.getElementById("conpass");
     var conpassError = document.getElementById("conpassError");
-    if (pass != conpass){
+    if (pass.value != conpassvalue){
         conpass.classList.add("error");
         conpassError.textContent = "passwords do not match";
     }else {
