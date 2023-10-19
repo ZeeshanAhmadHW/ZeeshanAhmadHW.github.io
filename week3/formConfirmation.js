@@ -47,7 +47,7 @@ function conpasscheck(){
     var pass = document.getElementById("pass");
     var conpass = document.getElementById("conpass");
     var conpassError = document.getElementById("conpassError");
-    var bordercolor = document.getElementById("conpassField");
+    var borderColor = document.getElementById("conpassField");
     if (pass.value != conpass.value){
         borderColor.classList.add("error");
         conpassError.textContent = "passwords do not match";
