@@ -1,3 +1,4 @@
+//function to check that username field is not empty
 function unamecheck(){
     var uname = document.getElementById("uname");
     var unameError = document.getElementById("unameError");
@@ -13,6 +14,7 @@ function unamecheck(){
     }
 }
 
+//function to check that email field is not empty and email follows proper format
 function emailcheck(){
     var email = document.getElementById("email");
     var emailError = document.getElementById("emailError");
@@ -32,6 +34,7 @@ function emailcheck(){
     }
 }
 
+//function to check that password is atleast 8 characters long
 function passcheck(){
     var pass = document.getElementById("pass");
     var passError = document.getElementById("passError");
@@ -47,6 +50,7 @@ function passcheck(){
     }
 }
 
+//function to confirm the password
 function conpasscheck(){
     var pass = document.getElementById("pass");
     var conpass = document.getElementById("conpass");
@@ -64,6 +68,7 @@ function conpasscheck(){
 
 }
 
+//function to check that the form is properly filled in for submission
 function formsubmit(){
     var uname = document.getElementById("unameField");
     var email = document.getElementById("emailField");
