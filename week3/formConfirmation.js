@@ -1,12 +1,13 @@
 function unamecheck(){
     var uname = document.getElementById("uname");
     var unameError = document.getElementById("unameError");
+    var borderColor = document.getElementById("unameField");
     if (uname.value.length === 0){
-        uname.classList.add("error");
+        borderColor.classList.add("error");
         unameError.textContent = "username field cannot be empty";
     }else {
-        uname.classList.remove("error");
-        uname.classList.add("success");
+        borderColor.classList.remove("error");
+        borderColor.classList.add("success");
         unameError.textContent = "";
     }
 }
@@ -14,15 +15,16 @@ function unamecheck(){
 function emailcheck(){
     var email = document.getElementById("email");
     var emailError = document.getElementById("emailError");
+    var borderColor = document.getElementById("emailField");
     if (email.value.length === 0){
-        email.classList.add("error");
+        borderColor.classList.add("error");
         emailError.textContent = "email field cannot be empty";
     }else if (!(email.value.includes("@") && email.value.includes(".com"))){
-        email.classList.add("error");
+        borderColor.classList.add("error");
         emailError.textContent = "email must be in format";
     }else {
-        email.classList.remove("error");
-        email.classList.add("success");
+        borderColor.classList.remove("error");
+        borderColor.classList.add("success");
         emailError.textContent = "";
     }
 }
@@ -30,12 +32,13 @@ function emailcheck(){
 function passcheck(){
     var pass = document.getElementById("pass");
     var passError = document.getElementById("passError");
+    var borderColor = document.getElementById("passField");
     if (pass.value.length < 8){
-        pass.classList.add("error");
+        borderColor.classList.add("error");
         passError.textContent = "password must have atleast 8 characters";
     }else {
-        pass.classList.remove("error");
-        pass.classList.add("success");
+        borderColor.classList.remove("error");
+        borderColor.classList.add("success");
         passError.textContent = "";
     }
 }
@@ -44,22 +47,23 @@ function conpasscheck(){
     var pass = document.getElementById("pass");
     var conpass = document.getElementById("conpass");
     var conpassError = document.getElementById("conpassError");
+    var bordercolor = document.getElementById("conpassField");
     if (pass.value != conpass.value){
-        conpass.classList.add("error");
+        borderColor.classList.add("error");
         conpassError.textContent = "passwords do not match";
     }else {
-        conpass.classList.remove("error");
-        conpass.classList.add("success");
+        borderColor.classList.remove("error");
+        borderColor.classList.add("success");
         conpassError.textContent = "";
     }
 
 }
 
 function formsubmit(){
-    var uname = document.getElementById("uname");
-    var email = document.getElementById("email");
-    var pass = document.getElementById("pass");
-    var conpass = document.getElementById("conpass");
+    var uname = document.getElementById("unameField");
+    var email = document.getElementById("emailField");
+    var pass = document.getElementById("passField");
+    var conpass = document.getElementById("conpassField");
     if (uname.classList.contains("success") && email.classList.contains("success") && 
         pass.classList.contains("success") && conpass.classList.contains("success")){
         window.alert("Form submitted successfully");
