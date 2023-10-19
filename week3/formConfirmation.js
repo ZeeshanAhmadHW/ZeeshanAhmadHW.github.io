@@ -30,7 +30,7 @@ function emailcheck(){
 function passcheck(){
     var pass = document.getElementById("pass");
     var passError = document.getElementById("passError");
-    if (pass.length < 8){
+    if (pass.value.length < 8){
         pass.classList.add("error");
         passError.textContent = "password must have atleast 8 characters";
     }else {
@@ -44,7 +44,7 @@ function conpasscheck(){
     var pass = document.getElementById("pass");
     var conpass = document.getElementById("conpass");
     var conpassError = document.getElementById("conpassError");
-    if (pass.value != conpassvalue){
+    if (pass.value != conpass.value){
         conpass.classList.add("error");
         conpassError.textContent = "passwords do not match";
     }else {
