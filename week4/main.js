@@ -1,12 +1,10 @@
-header("Access-Control-Allow-Origin: *");
-
 var cityContainer = document.getElementById("city-info");
 var btn = document.getElementById("btn");
 
 btn.addEventListener("click",function(){
     var ourRequest = new XMLHttpRequest();
 
-    ourRequest.open('GET', 'https://github.com/ZeeshanAhmadHW/ZeeshanAhmadHW.github.io/week4/cities1.json');
+    ourRequest.open('GET', 'https://github.com/ZeeshanAhmadHW/ZeeshanAhmadHW.github.io/cities1.json');
     ourRequest.onload = function() {
         var ourData = JSON.parse(ourRequest.responseText);
         renderHTML(ourData);
