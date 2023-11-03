@@ -1,3 +1,5 @@
+header("Access-Control-Allow-Origin: *");
+
 var cityContainer = document.getElementById("city-info");
 var btn = document.getElementById("btn");
 
