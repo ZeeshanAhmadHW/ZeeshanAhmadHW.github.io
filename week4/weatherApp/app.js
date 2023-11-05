@@ -1,9 +1,9 @@
 var btn = document.getElementById("btn");
 var info = document.getElementById("weather-info");
-var apikey = "addlater"
+var apikey = "94e4153b2ada1d90b4a124042f1dd7da"
 
 btn.addEventListener("click",function(){
-    var input = document.getElementById("cityInput").innerHTML;
+    var input = document.getElementById("cityInput").value;
 
     if (input === ""){
         window.alert("Enter a city name");
