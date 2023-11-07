@@ -13,10 +13,10 @@ btn.addEventListener("click",function(){
         Request.open('GET',("https://api.openweathermap.org/data/2.5/weather?q=" + input + "&appid=" + apikey + "&units=metric"));
         Request.onload = function() {
             var data = JSON.parse(Request.responseText);
-            
-            info.insertBefore((<p>"The temperature is " + data.main.temp + "°C with a wind speed of " + data.wind.speed + "m/s."</p>),info.firstChild);
-            info.insertBefore((<p>"The weather in " + input + " is " + data.weather[0].description + "."</p>),info.firstChild);
-            input.innerHTML = "";
+            var infotoadd = document.createElement("p");
+
+            infotoadd.innerhtml = "The temperature is " + data.main.temp +" °C with a wind speed of " + data.wind.speed + " m/s.<br>The weather in " + input + " is " + data.weather[0].description + ".<hr>";
+            info.insertBefore(infotoadd,info.firstChild);
         };
         Request.send();
     }
