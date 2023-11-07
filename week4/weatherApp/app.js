@@ -15,9 +15,9 @@ btn.addEventListener("click",function(){
             var data = JSON.parse(Request.responseText);
             var line1 = document.createElement("p");
             var line2 = document.createElement("p");
-            
-            line1.innerHTML = "<p>The weather in " + input + " is " + data.weather[0].description + ".</p><br>";
-            line2.innerHTML = "<p>The temperature is " + data.main.temp + "°C with a wind speed of " + data.wind.speed + "m/s.</p><hr>";
+
+            line1.innerHTML = "The weather in " + input + " is " + data.weather[0].description + ".";
+            line2.innerHTML = "The temperature is " + data.main.temp + "°C with a wind speed of " + data.wind.speed + "m/s.<hr>";
             info.insertBefore(line2,info.firstChild);
             info.insertBefore(line1,info.firstChild);
         };
