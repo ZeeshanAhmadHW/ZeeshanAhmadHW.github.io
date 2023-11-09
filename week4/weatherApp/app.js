@@ -11,6 +11,13 @@ btn.addEventListener("click",function(){
         var request = new XMLHttpRequest();
 
         request.open('GET',("https://api.openweathermap.org/data/2.5/weather?q=" + input + "&appid=" + apikey + "&units=metric"));
+        request.onerror = function() {
+            if (request.status == 404){
+                window.alert("Error " + request.status + ": " + request.statusText);
+            }else {
+                window.alert("Error");
+            }
+        }
         request.onload = function() {
             var data = JSON.parse(request.responseText);
             var line1 = document.createElement("p");
@@ -20,14 +27,6 @@ btn.addEventListener("click",function(){
             line2.innerHTML = "The temperature is " + data.main.temp + "°C with a wind speed of " + data.wind.speed + "m/s.<hr>";
             info.insertBefore(line2,info.firstChild);
             info.insertBefore(line1,info.firstChild);
-            input.value = "";
-        };
-        request.onerror = function() {
-            if (request.status == 404){
-                window.alert("Error " + request.status + ": " + request.statusText);
-            }else {
-                window.alert("Error");
-            }
         }
         request.send();
     }
