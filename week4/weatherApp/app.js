@@ -20,10 +20,14 @@ btn.addEventListener("click",function(){
             line2.innerHTML = "The temperature is " + data.main.temp + "°C with a wind speed of " + data.wind.speed + "m/s.<hr>";
             info.insertBefore(line2,info.firstChild);
             info.insertBefore(line1,info.firstChild);
-            input.innerhtml = "";
+            input.value = "";
         };
         request.onerror = function() {
-            window.alert("Error " + request.status + ": " + request.statusText);
+            if (request.status == 404){
+                window.alert("Error " + request.status + ": " + request.statusText);
+            }else {
+                window.alert("Error");
+            }
         }
         request.send();
     }
